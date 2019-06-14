@@ -1,10 +1,18 @@
 body {
 	margin: 0;
+	font-family: 'Helvetica', sans-serif;
+	letter-spacing: 0.02em;
+}
+
+* {
+	box-sizing: border-box;
 }
 
 #map { 
 	height: 100vh;
-	background: tan;
+	width: 50vw;
+	position: fixed;
+	left: 0;
 }
 
 #title {
@@ -21,4 +29,52 @@ body {
 	background-color: #FFF;
 	padding: 2px 5px;
 	border: 1px solid #000;
+	width: 150px;
+	line-height: 1.1;
+
 }
+
+#info {
+	background-color: #e75667;
+	position: fixed;
+	left: 50vw;
+	height: 100vh;
+	width: 50vw;
+	top: 0;
+	padding: 20px;
+	overflow: auto;
+	font-size: 2vw;
+	color: #000;
+}
+
+p {
+	margin-top: 0;
+
+}
+
+h4 {
+	margin: 0;
+	font-size: 14px;
+}
+
+.type {
+	border: 1px solid green;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+h2 {
+	flex: 1 0 100%;
+	margin-top: 0;
+	font-size: 28px;
+}
+
+.video {
+	flex: 0 1 33.3%;
+	border: 1px solid #000;
+	height: 150px;
+}
+
+
+
+

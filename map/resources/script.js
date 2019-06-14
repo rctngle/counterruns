@@ -2,21 +2,27 @@
 let map;
 
 let colors = [
-	'red', 'blue', 'green', 'purple', 'orange', 'red'
+	//'red', 'blue', 'green', 'purple', 'orange', 'red'
+	'#e75667', '#c94c5b', '#983c46', '#721924', '#db838d'
 ];
 
 
 let runNames = [
-	'Alternative_IKEA_trip',
-	'De_unification_Attp_1_2',
-	'Walk_to_activate_residential_areas',
-	'Generating_metadata',
+	'22_million_will_starve_in_Yemen',
+	'_counterruns_Disrobe_Boris_of_his_clown_costume',
+	'_counterruns_US_is_holding_humans_in_cages',
 	'_Solidarity_with_protesters_in_Sudan',
-	"file"
+	'Alternative_IKEA_trip',
+	'Ban_single_use_plastic_counterruns',
+	'De_unification_Attp_1_2',
+	'Dominic_Raab_is_engaging_in_a_bizarre_kind_of_American_style_culture_war_politics_counterruns',
+	'Generating_metadata',
+	'Milifitness_counterruns',
+	'The_bees_are_fucked_counterruns',
+	'Walk_to_activate_residential_areas'
 ];
 
 window.addEventListener('DOMContentLoaded', function(){
-	console.log('nana');
 	mapboxgl.accessToken = "pk.eyJ1IjoiYW5lY2RvdGUxMDEiLCJhIjoiY2oxMGhjbmpsMDAyZzJ3a2V0ZTBsNThoMiJ9.1Ce55CnAaojzkqgfX70fAw";
 	map = new mapboxgl.Map({
 		container: "map",
@@ -29,7 +35,6 @@ window.addEventListener('DOMContentLoaded', function(){
 			plotCounterRun(run, i);
 		})
 	});	
-
 });
 
 function plotCounterRun(run, i){
@@ -73,7 +78,7 @@ function plotCounterRun(run, i){
 				"line-cap": "round"
 			},
 			"paint": {
-				"line-color": colors[i],
+				"line-color": colors[Math.floor(Math.random() * colors.length)],
 				"line-width": 4
 			}
 		})
