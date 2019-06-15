@@ -53,7 +53,7 @@ function plotCounterRun(run, i){
 
 		var el = document.createElement('div');
 		el.classList.add('marker');
-		el.innerText = name;
+		el.innerText = name.replace('#counterruns', '');
 		// el.addEventListener('click', function() {
 		// window.alert(marker.properties.message);
 		//}
